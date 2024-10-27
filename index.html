@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bao gia </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <script src="plansData.js"></script> -->
+</head>
+
+<style>
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+
+    /* HTML5 display-role reset for older browsers */
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+        display: block;
+    }
+
+    body {
+        line-height: 1;
+    }
+
+    ol,
+    ul {
+        list-style: none;
+    }
+
+    blockquote,
+    q {
+        quotes: none;
+    }
+
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+        content: '';
+        content: none;
+    }
+
+
+    button.dropdown-btn {
+        background: transparent;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        margin-left: 5px;
+    }
+
+    i.fa-check {
+        font-size: 24px;
+        color: #81b441;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container-table {
+        margin: 20px auto;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .container-table .plan-head-mobile {
+        display: none;
+        justify-content: space-between;
+        gap: 1px;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+
+        & .tab {
+            width: 100%;
+            text-align: center;
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+            position: relative;
+            transition: all 0.2s ease-in-out;
+
+            &.active {
+                background-color: #81b441;
+                opacity: 1;
+
+                &::after {
+                    content: "";
+                    border-width: 0 10px 10px 10px;
+                    color: #fff;
+                    border-style: solid;
+                    position: absolute;
+                    content: '';
+                    position: absolute;
+                    border-color: transparent transparent #FFFF transparent;
+                    bottom: 0px;
+                    font-size: 22px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+
+    table {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+
+        & thead th {
+            background-color: #007bff;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            padding: 20px 0;
+        }
+
+        & th,
+        td {
+            padding: 15px !important;
+            text-align: center;
+            border: 1px solid #ccc;
+            vertical-align: middle;
+            word-wrap: break-word;
+        }
+
+        & tbody {
+            & th {
+                background-color: #f1f1f1;
+                color: #333;
+                text-align: left;
+                padding-left: 10px;
+                font-weight: bold;
+            }
+
+            ;
+
+            & tr td:hover {
+                background-color: #eef7ff;
+            }
+
+            ;
+
+            & tr {
+                & td {
+                    position: relative;
+                    padding-bottom: 20px;
+
+                    &:hover {
+                        background-color: #eef7ff;
+                    }
+                }
+            }
+        }
+
+        ;
+
+        & th.plan-head:not(:first-child) {
+            background-color: #007bff;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        ;
+
+        & th:first-child {
+            background-color: transparent;
+            position: relative;
+            border: none;
+        }
+
+        ;
+
+        & .plan-head {
+
+            & .tab,
+            th.tab {
+                border: none;
+                border-right: 2px solid #ccc;
+            }
+        }
+
+        /* Make radius nth child 2 cuz first tab is empty in desktop */
+        & .plan-head {
+            & th.tab:nth-child(2) {
+                border-top-left-radius: 10px;
+            }
+
+            & th.tab:last-child {
+                border-top-right-radius: 10px;
+                border-right: none !important;
+            }
+        }
+
+        /* Remove the border radius when the sticky class is applied */
+        .plan-head.sticky th.tab:nth-child(2),
+        .plan-head.sticky th.tab:last-child {
+            border-radius: 0;
+        }
+
+        & thead.plan-head {
+
+            & .plan-column.active {
+                background-color: #007bff;
+                color: white;
+            }
+
+            & .plan-column.active td {
+                background-color: #eef7ff;
+                font-weight: bold;
+            }
+        }
+
+        ;
+
+        & tbody.section-container {
+            & .section-header th {
+                border: 1px solid #ccc;
+                background-color: #eef7ff;
+                color: #333;
+                text-align: left;
+                padding-left: 10px;
+                font-weight: bold;
+                font-size: 20px;
+
+            }
+
+            & tr.section-row {
+                & .feature-column {
+                    & h4 {
+                        text-align: left;
+                        line-height: 1.5rem;
+                    }
+                }
+
+                & td>.row-box {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                }
+
+                & .dropdown-content {
+                    display: block;
+                    max-height: 0;
+                    z-index: 10;
+                    overflow: hidden;
+                    transition: all .2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                    text-align: left;
+                    opacity: 0;
+                    list-style-type: disc !important;
+                    line-height: 1.5rem;
+
+                    & a {
+                        color: #007bff;
+                        text-decoration: none;
+                        font-weight: bold;
+                        transition: color 0.2s ease-in-out;
+
+                        &:hover {
+                            color: #0056b3;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                & .dropdown-content.show {
+                    max-height: 100%;
+                    opacity: 1;
+                    padding: 15px;
+
+                    & li {
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+
+        ;
+
+        & tfoot {
+            & .plan-checkout-desktop {
+                & th.plan-checkout {
+                    letter-spacing: 1px;
+                }
+            }
+
+            & tr {
+                & th.plan-checkout {
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    color: white;
+                    text-transform: uppercase;
+                    border-right: 2px solid #d8e5f0;
+                    border-top: 2px solid #d8e5f0;
+                    letter-spacing: .5px;
+                    border-bottom: 1px solid #d8e5f0;
+                    background-color: #81b441;
+                }
+            }
+        }
+
+        ;
+
+    }
+
+    #plan-table {
+        & .tab h3 {
+            font-size: 22px !important;
+            color: #fff;
+            letter-spacing: .5px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 500
+        }
+
+        & .tab span {
+            font-size: 25px !important;
+            color: #fff;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-family: "Roboto", sans-serif;
+            line-height: 1.4;
+            letter-spacing: 1px;
+            font-weight: 600
+        }
+    }
+
+    .plan-head-mobile {
+        & .tab h3 {
+            font-size: 16px !important;
+            color: #fff;
+            letter-spacing: .5px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 500
+        }
+
+        & .tab span {
+            font-size: 20px !important;
+            color: #fff;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-family: "Roboto", sans-serif;
+            line-height: 1.4;
+            font-weight: 600
+        }
+
+        & .tab:first-child {
+            border-top-left-radius: 10px;
+        }
+
+        & .tab:last-child {
+            border-top-right-radius: 10px;
+        }
+    }
+
+    .plan-checkout-mobile-btn {
+        display: none;
+    }
+
+    /* Responsive for tablet to smaller ones */
+    @media screen and (max-width: 768px) {
+        .plan-checkout-desktop {
+            display: none;
+        }
+
+        .plan-head.plan-head-mobile.tablist.secondary {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+        }
+
+        .plan-head-mobile:first-child {
+            display: flex !important;
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+        }
+
+        .plan-checkout-mobile {
+            width: 100%;
+        }
+
+        .plan-checkout-mobile-btn {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            cursor: pointer;
+
+            & div:first-child {
+                visibility: hidden;
+            }
+
+            & div:last-child {
+                width: 100%;
+                text-align: center;
+                color: white;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                background-color: #81b441;
+                padding: 20px 0;
+                font-weight: 500;
+                transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+                &:hover {
+                    background-color: #2e7d32;
+                }
+            }
+        }
+
+        table {
+            table-layout: fixed;
+        }
+
+        thead.plan-head tr {
+            display: none;
+        }
+
+        thead.plan-head th.tab {
+            display: table-cell;
+            width: 100%;
+        }
+
+        tbody.section-container td,
+        tbody.section-container th {
+            display: none;
+        }
+
+        tbody.section-container th:first-child,
+        tbody.section-container td:first-child {
+            display: table-cell;
+            width: 50% !important;
+        }
+
+        tbody.section-container td.plan-column.active {
+            display: table-cell;
+            width: 50% !important;
+        }
+
+        td,
+        th {
+            word-wrap: break-word;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .row-box {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        tfoot th.plan-checkout.active {
+            display: table-cell;
+            width: 100%;
+            text-align: center;
+        }
+    }
+</style>
+
+<body>
+    <div class="123">
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+    </div>
+    <section class="container-table">
+        <div class="plan-head plan-head-mobile tablist">
+            <div class="tab active" data-plan="basic">
+                <h3>Cơ Bản</h3><br><span>2.388.000 </span>₫/năm
+            </div>
+            <div class="tab" data-plan="standard">
+                <h3>Tiêu Chuẩn</h3><br><span>3.588.000</span> ₫/năm
+            </div>
+            <div class="tab" data-plan="premium">
+                <h3>Cao Cấp</h3><br><span>5.988.000</span> ₫/năm
+            </div>
+        </div>
+        <div class="plan-head plan-head-mobile tablist secondary">
+            <div class="tab active" data-plan="basic">
+                <h3>Cơ Bản</h3><br><span>2.388.000 </span>₫/năm
+            </div>
+            <div class="tab" data-plan="standard">
+                <h3>Tiêu Chuẩn</h3><br><span>3.588.000</span> ₫/năm
+            </div>
+            <div class="tab" data-plan="premium">
+                <h3>Cao Cấp</h3><br><span>5.988.000</span> ₫/năm
+            </div>
+        </div>
+        <table id="plan-table">
+            <thead class="plan-head tablist">
+                <tr>
+                    <th class="empty-tab"></th>
+                    <th class="tab active" data-plan="basic">
+                        <h3>Cơ Bản</h3><br><span>2.388.000 ₫/năm</span>
+                    </th>
+                    <th class="tab" data-plan="standard">
+                        <h3>Tiêu Chuẩn</h3><br><span>3.588.000 ₫/năm</span>
+                    </th>
+                    <th class="tab" data-plan="premium">
+                        <h3>Cao Cấp</h3><br><span>5.988.000 ₫/năm</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="section-container" id="table-body">
+            </tbody>
+            <tfoot>
+                <tr class="plan-checkout-desktop">
+                    <th class="empty-tab"></th>
+                    <th class="plan-checkout" data-plan="basic">
+                        Đăng ký ngay
+                    </th>
+                    <th class="plan-checkout" data-plan="standard">
+                        Đăng ký ngay
+                    </th>
+                    <th class="plan-checkout" data-plan="premium">
+                        Đăng ký ngay
+                    </th>
+                </tr>
+            </tfoot>
+        </table>
+        <div class="tfoot plan-checkout-mobile-btn">
+            <div></div>
+            <div class="mobile-btn-click">
+                Đăng ký ngay
+            </div>
+        </div>
+
+
+
+ <!-- SCRIPT -->
+ <script>
+    const plansData = [
+        {
+            sectionTitle: "Thông tin chung",
+            features: [
+                {
+                    title: "Đơn vị tin lưu trữ",
+                    description: ["500 storage units"],
+                    values: { basic: "500", standard: "1,000", premium: "5,000" },
+                },
+                {
+                    title: "Trang bố cục",
+                    description: [
+                        "Tổng số lượng dữ liệu tin tức",
+                        "Sản phẩm, dịch vụ",
+                        "Ti tuyển dụng",
+                    ],
+                    values: { basic: "25", standard: "50", premium: "100" },
+                },
+                {
+                    title: "Dung lượng lưu trữ",
+                    description: [
+                        "Tổng số lượng dữ liệu tin tức",
+                        "Sản phẩm, dịch vụ",
+                        "Ti tuyển dụng",
+                    ],
+                    values: { basic: "5 GB", standard: "10 GB", premium: "50 GB" },
+                },
+                {
+                    title: "Băng thông",
+                    description: [
+                        "Tổng số lượng dữ liệu tin tức",
+                        "Sản phẩm, dịch vụ",
+                        "Ti tuyển dụng",
+                    ],
+                    values: { basic: "20 GB", standard: "50 GB", premium: "Unlimited" },
+                },
+                {
+                    title: "Mẫu giao diện",
+                    description: [
+                        "Tổng số lượng dữ liệu tin tức",
+                        "Sản phẩm, dịch vụ",
+                        "Ti tuyển dụng",
+                    ],
+                    values: { basic: "Basic", standard: "Standard", premium: "Premium" },
+                },
+                {
+                    title: "Ngôn ngữ",
+                    description: [
+                        "Tổng số lượng dữ liệu tin tức",
+                        "Sản phẩm, dịch vụ",
+                        "Ti tuyển dụng",
+                    ],
+                    values: { basic: "1", standard: "1", premium: "2" },
+                },
+                {
+                    title: "Công cụ quản trị website",
+                    description: [
+                        "Tổng số lượng dữ liệu tin tức",
+                        "Sản phẩm, dịch vụ",
+                        "Ti tuyển dụng",
+                    ],
+                    values: {
+                        basic: '<i class="fa-solid fa-check"></i>',
+                        standard: '<i class="fa-solid fa-check"></i>',
+                        premium: '<i class="fa-solid fa-check"></i>',
+                    },
+                },
+                {
+                    title: "Chứng chỉ bảo mật SSL",
+                    description: [
+                        "Tổng số lượng dữ liệu tin tức",
+                        "Sản phẩm, dịch vụ",
+                        "Ti tuyển dụng",
+                    ],
+                    values: {
+                        basic: '<i class="fa-solid fa-check"></i>',
+                        standard: '<i class="fa-solid fa-check"></i>',
+                        premium: '<i class="fa-solid fa-check"></i>',
+                    },
+                },
+                {
+                    title: "Thông báo qua Email",
+                    description: [
+                        "Gói website đã bao gồm công cụ gửi email với giới hạn gửi email trên 1 tháng.",
+                        "Gửi email các thông tin như xác nhận đơn hàng, thông tin đăng ký,… từ website tới khách hàng qua tên địa chỉ email sender@mailer.matbaows.com",
+                    ],
+                    values: {
+                        basic: "100 lần",
+                        standard: "200 lần",
+                        premium: "500 lần",
+                    },
+                },
+                {
+                    title: "Nút liên hệ nhanh",
+                    description: [
+                        "Nút liên hệ nhanh qua: Điện thoại, Messenger, Zalo, Telegram, WhatsApp, SMS, …giúp bạn tương tác với khách hàng dễ dàng hơn.",
+                    ],
+                    values: {
+                        basic: '<i class="fa-solid fa-check"></i>',
+                        standard: '<i class="fa-solid fa-check"></i>',
+                        premium: '<i class="fa-solid fa-check"></i>',
+                    },
+                },
+                {
+                    title: "Phát triển tính năng",
+                    description: [
+                        "Phát triển thêm tính năng theo yêu cầu của bạn, đơn giá dựa theo khối lượng công việc lập trình tính năng.",
+                        "Tuy nhiên, bạn có thể mua thêm tính năng đóng gói ở <a href='https://example.com' target='_blank'>kho ứng dụng web.</a> ",
+                    ],
+                    values: {
+                        basic: "-",
+                        standard: "-",
+                        premium: '<i class="fa-solid fa-check"></i>',
+                    },
+                },
+                {
+                    title: "Bỏ bản quyền Mắt Bão WS",
+                    description: ["Xóa bản quyền Mắt Bão WS dưới chân trang."],
+                    values: {
+                        basic: "-",
+                        standard: "-",
+                        premium: '<i class="fa-solid fa-check"></i>',
+                    },
+                },
+            ],
+        },
+        //   SECTION 2
+        {
+            sectionTitle: "Quản lý bán hàng",
+            features: [
+                {
+                    title: "Bỏ bản quyền Mắt Bão WS",
+                    description: ["Xóa bản quyền Mắt Bão WS dưới chân trang."],
+                    values: {
+                        basic: "-",
+                        standard: "-",
+                        premium: '<i class="fa-solid fa-check"></i>',
+                    },
+                },
+            ],
+        },
+    ];
+
+    document.addEventListener("DOMContentLoaded", function () {
+        renderTableRows(plansData);
+    })
+
+    // Render Table rows data from Object. It might be a json file.
+    let activePlan = 'basic';
+    function renderTableRows(plansData) {
+        const tableBody = document.getElementById("table-body");
+        tableBody.innerHTML = "";
+        plansData.forEach((section, sectionIndex) => {
+            // Add section header
+            const sectionHeader = `
+                <tr class="section-header">
+                    <th colspan="4">${section.sectionTitle}</th>
+                </tr>
+            `;
+            tableBody.insertAdjacentHTML('beforeend', sectionHeader);
+            // Add rows for each feature
+            section.features.forEach((item, index) => {
+                const dropdownId = `dropdown-${sectionIndex + 1}-${index + 1}`;
+                const row = `
+                    <tr class="section-row">
+                        <td class="feature-column" colspan="2">
+                            <div class="row-box" onclick="toggleDropdown('${dropdownId}', this)">
+                                <h4>${item.title}</h4>
+                                <button class="dropdown-btn">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                            </div>
+                            <ul class="dropdown-content" id="${dropdownId}">
+                                ${item.description.map(desc => `<li>${desc}</li>`).join('')}
+                            </ul>
+                        </td>
+                        <td class="plan-column ${activePlan === 'basic' ? 'active' : ''}" data-plan="basic" colspan="2">${item.values.basic}</td>
+                        <td class="plan-column ${activePlan === 'standard' ? 'active' : ''}" data-plan="standard" colspan="2">${item.values.standard}</td>
+                        <td class="plan-column ${activePlan === 'premium' ? 'active' : ''}" data-plan="premium" colspan="2">${item.values.premium}</td>
+                    </tr>
+                `;
+                tableBody.insertAdjacentHTML('beforeend', row);
+            });
+        });
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+        const containerTable = document.querySelector('.container-table');
+        const secondaryHeader = document.querySelector('.plan-head.plan-head-mobile.tablist.secondary');
+        const primaryHeader = document.querySelector('.plan-head.plan-head-mobile.tablist:not(.secondary)');
+
+        // Hide the secondary header by default
+        secondaryHeader.style.display = 'none';
+
+        // Function to handle scroll event
+        function handleScroll() {
+            const containerRect = containerTable.getBoundingClientRect();
+
+            // If the container-table is visible in the viewport
+            if (window.innerWidth <= 768) {
+                if (containerRect.top <= 0 && containerRect.bottom > 0) {
+                    // Show the secondary header and hide the primary header
+                    secondaryHeader.style.display = 'flex';
+                    secondaryHeader.style.position = 'fixed';
+                    secondaryHeader.style.top = '0';
+                    secondaryHeader.style.width = '100%';
+                    primaryHeader.style.display = 'none';
+                } else {
+                    // If the container-table is not in view, hide the secondary header and show the primary one
+                    secondaryHeader.style.display = 'none';
+                    // primaryHeader.style.display = 'flex';
+                }
+            } else {
+                secondaryHeader.style.display = 'none';
+            }
+        }
+
+        // Attach the scroll event listener
+        window.addEventListener('scroll', handleScroll);
+
+        // Call handleScroll initially in case the user is already scrolled
+        handleScroll();
+    });
+    // Binding to component to render before page loading.
+
+    // toggle dropdown index for each row 
+    function toggleDropdown(id, el) {
+        const dropdown = document.getElementById(id);
+        const icon = el.querySelector(".fa-solid")
+        if (dropdown.classList.contains('show')) {
+            dropdown.classList.remove('show');
+            icon.classList.remove('fa-chevron-up');
+            icon.classList.add('fa-chevron-down');
+        } else {
+            // Hide other open dropdowns !
+            // document.querySelectorAll('.dropdown-content').forEach(function (content) {
+            //     content.classList.remove('show');
+            // });
+            dropdown.classList.add('show');
+
+            document.querySelectorAll('.fa-solid').forEach(function (icon) {
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            });
+
+            dropdown.classList.add('show');
+            icon.classList.remove('fa-chevron-down');
+            icon.classList.add('fa-chevron-up');
+        }
+    }
+    // Toggle tab pills each plan.
+    document.querySelectorAll('.plan-head-mobile .tab').forEach(function (tab) {
+        tab.addEventListener('click', function () {
+            activePlan = tab.getAttribute("data-plan");
+
+            document.querySelectorAll('.plan-head-mobile .tab').forEach(function (otherTab) {
+                otherTab.classList.remove("active")
+            })
+            tab.classList.add("active")
+            renderTableRows(plansData);
+
+            document.querySelectorAll('tfoot th.plan-checkout').forEach(function (footer) {
+                footer.classList.remove('active');
+                if (footer.getAttribute('data-plan') === activePlan) {
+                    footer.classList.add('active');
+                }
+            });
+        });
+    });
+
+    // Add same width for each tab.
+    document.addEventListener("DOMContentLoaded", function () {
+        const tabs = document.querySelectorAll('#plan-table .tab');
+        const visibleCount = Array.from(tabs).filter(tab => !tab.classList.contains('hidden')).length;
+
+        const ths = document.querySelectorAll('#plan-table .plan-head th');
+        ths.forEach(th => {
+            th.style.width = `${100 / visibleCount}%`;
+        });
+    });
+
+    // Split colspan for active plan column when in mobile.
+    function AdjustColspan() {
+        const featureColumn = document.querySelectorAll('.feature-column');
+        const activePlanColumn = document.querySelectorAll('.plan-column');
+        featureColumn.forEach(column => {
+            if (window.innerWidth <= 768) {
+                column.setAttribute('colspan', '2');
+            } else {
+                column.removeAttribute('colspan');
+            }
+        });
+        activePlanColumn.forEach(column => {
+            if (window.innerWidth <= 768) {
+                column.setAttribute('colspan', '2');
+            } else {
+                column.removeAttribute('colspan');
+            }
+        });
+    }
+    // Adjust colspan on page load and when window is resized
+    window.addEventListener('resize', AdjustColspan);
+    window.addEventListener('load', AdjustColspan);
+</script>
+    </section>
+    <div class="123">
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+        <h1>123</h1>
+    </div>
+   
+</body>
+
+</html>
