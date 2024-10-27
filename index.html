@@ -381,6 +381,7 @@
                     max-height: 100%;
                     opacity: 1;
                     padding: 20px;
+
                     & li {
                         margin-top: 5px;
                     }
@@ -487,6 +488,7 @@
 
         .plan-head-mobile:first-child {
             display: flex !important;
+            position: initial !important;
         }
 
         .plan-checkout-mobile {
@@ -657,172 +659,172 @@
 
 
 
- <!-- SCRIPT -->
- <script>
-    const plansData = [
-        {
-            sectionTitle: "Thông tin chung",
-            features: [
+        <!-- SCRIPT -->
+        <script>
+            const plansData = [
                 {
-                    title: "Đơn vị tin lưu trữ",
-                    description: ["500 storage units"],
-                    values: { basic: "500", standard: "1,000", premium: "5,000" },
-                },
-                {
-                    title: "Trang bố cục",
-                    description: [
-                        "Tổng số lượng dữ liệu tin tức",
-                        "Sản phẩm, dịch vụ",
-                        "Ti tuyển dụng",
+                    sectionTitle: "Thông tin chung",
+                    features: [
+                        {
+                            title: "Đơn vị tin lưu trữ",
+                            description: ["500 storage units"],
+                            values: { basic: "500", standard: "1,000", premium: "5,000" },
+                        },
+                        {
+                            title: "Trang bố cục",
+                            description: [
+                                "Tổng số lượng dữ liệu tin tức",
+                                "Sản phẩm, dịch vụ",
+                                "Ti tuyển dụng",
+                            ],
+                            values: { basic: "25", standard: "50", premium: "100" },
+                        },
+                        {
+                            title: "Dung lượng lưu trữ",
+                            description: [
+                                "Tổng số lượng dữ liệu tin tức",
+                                "Sản phẩm, dịch vụ",
+                                "Ti tuyển dụng",
+                            ],
+                            values: { basic: "5 GB", standard: "10 GB", premium: "50 GB" },
+                        },
+                        {
+                            title: "Băng thông",
+                            description: [
+                                "Tổng số lượng dữ liệu tin tức",
+                                "Sản phẩm, dịch vụ",
+                                "Ti tuyển dụng",
+                            ],
+                            values: { basic: "20 GB", standard: "50 GB", premium: "Unlimited" },
+                        },
+                        {
+                            title: "Mẫu giao diện",
+                            description: [
+                                "Tổng số lượng dữ liệu tin tức",
+                                "Sản phẩm, dịch vụ",
+                                "Ti tuyển dụng",
+                            ],
+                            values: { basic: "Basic", standard: "Standard", premium: "Premium" },
+                        },
+                        {
+                            title: "Ngôn ngữ",
+                            description: [
+                                "Tổng số lượng dữ liệu tin tức",
+                                "Sản phẩm, dịch vụ",
+                                "Ti tuyển dụng",
+                            ],
+                            values: { basic: "1", standard: "1", premium: "2" },
+                        },
+                        {
+                            title: "Công cụ quản trị website",
+                            description: [
+                                "Tổng số lượng dữ liệu tin tức",
+                                "Sản phẩm, dịch vụ",
+                                "Ti tuyển dụng",
+                            ],
+                            values: {
+                                basic: '<i class="fa-solid fa-check"></i>',
+                                standard: '<i class="fa-solid fa-check"></i>',
+                                premium: '<i class="fa-solid fa-check"></i>',
+                            },
+                        },
+                        {
+                            title: "Chứng chỉ bảo mật SSL",
+                            description: [
+                                "Tổng số lượng dữ liệu tin tức",
+                                "Sản phẩm, dịch vụ",
+                                "Ti tuyển dụng",
+                            ],
+                            values: {
+                                basic: '<i class="fa-solid fa-check"></i>',
+                                standard: '<i class="fa-solid fa-check"></i>',
+                                premium: '<i class="fa-solid fa-check"></i>',
+                            },
+                        },
+                        {
+                            title: "Thông báo qua Email",
+                            description: [
+                                "Gói website đã bao gồm công cụ gửi email với giới hạn gửi email trên 1 tháng.",
+                                "Gửi email các thông tin như xác nhận đơn hàng, thông tin đăng ký,… từ website tới khách hàng qua tên địa chỉ email sender@mailer.matbaows.com",
+                            ],
+                            values: {
+                                basic: "100 lần",
+                                standard: "200 lần",
+                                premium: "500 lần",
+                            },
+                        },
+                        {
+                            title: "Nút liên hệ nhanh",
+                            description: [
+                                "Nút liên hệ nhanh qua: Điện thoại, Messenger, Zalo, Telegram, WhatsApp, SMS, …giúp bạn tương tác với khách hàng dễ dàng hơn.",
+                            ],
+                            values: {
+                                basic: '<i class="fa-solid fa-check"></i>',
+                                standard: '<i class="fa-solid fa-check"></i>',
+                                premium: '<i class="fa-solid fa-check"></i>',
+                            },
+                        },
+                        {
+                            title: "Phát triển tính năng",
+                            description: [
+                                "Phát triển thêm tính năng theo yêu cầu của bạn, đơn giá dựa theo khối lượng công việc lập trình tính năng.",
+                                "Tuy nhiên, bạn có thể mua thêm tính năng đóng gói ở <a href='https://example.com' target='_blank'>kho ứng dụng web.</a> ",
+                            ],
+                            values: {
+                                basic: "-",
+                                standard: "-",
+                                premium: '<i class="fa-solid fa-check"></i>',
+                            },
+                        },
+                        {
+                            title: "Bỏ bản quyền Mắt Bão WS",
+                            description: ["Xóa bản quyền Mắt Bão WS dưới chân trang."],
+                            values: {
+                                basic: "-",
+                                standard: "-",
+                                premium: '<i class="fa-solid fa-check"></i>',
+                            },
+                        },
                     ],
-                    values: { basic: "25", standard: "50", premium: "100" },
                 },
+                //   SECTION 2
                 {
-                    title: "Dung lượng lưu trữ",
-                    description: [
-                        "Tổng số lượng dữ liệu tin tức",
-                        "Sản phẩm, dịch vụ",
-                        "Ti tuyển dụng",
+                    sectionTitle: "Quản lý bán hàng",
+                    features: [
+                        {
+                            title: "Bỏ bản quyền Mắt Bão WS",
+                            description: ["Xóa bản quyền Mắt Bão WS dưới chân trang."],
+                            values: {
+                                basic: "-",
+                                standard: "-",
+                                premium: '<i class="fa-solid fa-check"></i>',
+                            },
+                        },
                     ],
-                    values: { basic: "5 GB", standard: "10 GB", premium: "50 GB" },
                 },
-                {
-                    title: "Băng thông",
-                    description: [
-                        "Tổng số lượng dữ liệu tin tức",
-                        "Sản phẩm, dịch vụ",
-                        "Ti tuyển dụng",
-                    ],
-                    values: { basic: "20 GB", standard: "50 GB", premium: "Unlimited" },
-                },
-                {
-                    title: "Mẫu giao diện",
-                    description: [
-                        "Tổng số lượng dữ liệu tin tức",
-                        "Sản phẩm, dịch vụ",
-                        "Ti tuyển dụng",
-                    ],
-                    values: { basic: "Basic", standard: "Standard", premium: "Premium" },
-                },
-                {
-                    title: "Ngôn ngữ",
-                    description: [
-                        "Tổng số lượng dữ liệu tin tức",
-                        "Sản phẩm, dịch vụ",
-                        "Ti tuyển dụng",
-                    ],
-                    values: { basic: "1", standard: "1", premium: "2" },
-                },
-                {
-                    title: "Công cụ quản trị website",
-                    description: [
-                        "Tổng số lượng dữ liệu tin tức",
-                        "Sản phẩm, dịch vụ",
-                        "Ti tuyển dụng",
-                    ],
-                    values: {
-                        basic: '<i class="fa-solid fa-check"></i>',
-                        standard: '<i class="fa-solid fa-check"></i>',
-                        premium: '<i class="fa-solid fa-check"></i>',
-                    },
-                },
-                {
-                    title: "Chứng chỉ bảo mật SSL",
-                    description: [
-                        "Tổng số lượng dữ liệu tin tức",
-                        "Sản phẩm, dịch vụ",
-                        "Ti tuyển dụng",
-                    ],
-                    values: {
-                        basic: '<i class="fa-solid fa-check"></i>',
-                        standard: '<i class="fa-solid fa-check"></i>',
-                        premium: '<i class="fa-solid fa-check"></i>',
-                    },
-                },
-                {
-                    title: "Thông báo qua Email",
-                    description: [
-                        "Gói website đã bao gồm công cụ gửi email với giới hạn gửi email trên 1 tháng.",
-                        "Gửi email các thông tin như xác nhận đơn hàng, thông tin đăng ký,… từ website tới khách hàng qua tên địa chỉ email sender@mailer.matbaows.com",
-                    ],
-                    values: {
-                        basic: "100 lần",
-                        standard: "200 lần",
-                        premium: "500 lần",
-                    },
-                },
-                {
-                    title: "Nút liên hệ nhanh",
-                    description: [
-                        "Nút liên hệ nhanh qua: Điện thoại, Messenger, Zalo, Telegram, WhatsApp, SMS, …giúp bạn tương tác với khách hàng dễ dàng hơn.",
-                    ],
-                    values: {
-                        basic: '<i class="fa-solid fa-check"></i>',
-                        standard: '<i class="fa-solid fa-check"></i>',
-                        premium: '<i class="fa-solid fa-check"></i>',
-                    },
-                },
-                {
-                    title: "Phát triển tính năng",
-                    description: [
-                        "Phát triển thêm tính năng theo yêu cầu của bạn, đơn giá dựa theo khối lượng công việc lập trình tính năng.",
-                        "Tuy nhiên, bạn có thể mua thêm tính năng đóng gói ở <a href='https://example.com' target='_blank'>kho ứng dụng web.</a> ",
-                    ],
-                    values: {
-                        basic: "-",
-                        standard: "-",
-                        premium: '<i class="fa-solid fa-check"></i>',
-                    },
-                },
-                {
-                    title: "Bỏ bản quyền Mắt Bão WS",
-                    description: ["Xóa bản quyền Mắt Bão WS dưới chân trang."],
-                    values: {
-                        basic: "-",
-                        standard: "-",
-                        premium: '<i class="fa-solid fa-check"></i>',
-                    },
-                },
-            ],
-        },
-        //   SECTION 2
-        {
-            sectionTitle: "Quản lý bán hàng",
-            features: [
-                {
-                    title: "Bỏ bản quyền Mắt Bão WS",
-                    description: ["Xóa bản quyền Mắt Bão WS dưới chân trang."],
-                    values: {
-                        basic: "-",
-                        standard: "-",
-                        premium: '<i class="fa-solid fa-check"></i>',
-                    },
-                },
-            ],
-        },
-    ];
+            ];
 
-    document.addEventListener("DOMContentLoaded", function () {
-        renderTableRows(plansData);
-    })
+            document.addEventListener("DOMContentLoaded", function () {
+                renderTableRows(plansData);
+            })
 
-    // Render Table rows data from Object. It might be a json file.
-    let activePlan = 'basic';
-    function renderTableRows(plansData) {
-        const tableBody = document.getElementById("table-body");
-        tableBody.innerHTML = "";
-        plansData.forEach((section, sectionIndex) => {
-            // Add section header
-            const sectionHeader = `
+            // Render Table rows data from Object. It might be a json file.
+            let activePlan = 'basic';
+            function renderTableRows(plansData) {
+                const tableBody = document.getElementById("table-body");
+                tableBody.innerHTML = "";
+                plansData.forEach((section, sectionIndex) => {
+                    // Add section header
+                    const sectionHeader = `
                 <tr class="section-header">
                     <th colspan="4">${section.sectionTitle}</th>
                 </tr>
             `;
-            tableBody.insertAdjacentHTML('beforeend', sectionHeader);
-            // Add rows for each feature
-            section.features.forEach((item, index) => {
-                const dropdownId = `dropdown-${sectionIndex + 1}-${index + 1}`;
-                const row = `
+                    tableBody.insertAdjacentHTML('beforeend', sectionHeader);
+                    // Add rows for each feature
+                    section.features.forEach((item, index) => {
+                        const dropdownId = `dropdown-${sectionIndex + 1}-${index + 1}`;
+                        const row = `
                     <tr class="section-row">
                         <td class="feature-column" colspan="2">
                             <div class="row-box" onclick="toggleDropdown('${dropdownId}', this)">
@@ -840,128 +842,128 @@
                         <td class="plan-column ${activePlan === 'premium' ? 'active' : ''}" data-plan="premium" colspan="2">${item.values.premium}</td>
                     </tr>
                 `;
-                tableBody.insertAdjacentHTML('beforeend', row);
-            });
-        });
-    }
-    document.addEventListener("DOMContentLoaded", function () {
-        const containerTable = document.querySelector('.container-table');
-        const secondaryHeader = document.querySelector('.plan-head.plan-head-mobile.tablist.secondary');
-        const primaryHeader = document.querySelector('.plan-head.plan-head-mobile.tablist:not(.secondary)');
+                        tableBody.insertAdjacentHTML('beforeend', row);
+                    });
+                });
+            }
+            document.addEventListener("DOMContentLoaded", function () {
+                const containerTable = document.querySelector('.container-table');
+                const secondaryHeader = document.querySelector('.plan-head.plan-head-mobile.tablist.secondary');
+                const primaryHeader = document.querySelector('.plan-head.plan-head-mobile.tablist:not(.secondary)');
 
-        // Hide the secondary header by default
-        secondaryHeader.style.display = 'none';
-
-        // Function to handle scroll event
-        function handleScroll() {
-            const containerRect = containerTable.getBoundingClientRect();
-
-            // If the container-table is visible in the viewport
-            if (window.innerWidth <= 768) {
-                if (containerRect.top <= 0 && containerRect.bottom > 0) {
-                    // Show the secondary header and hide the primary header
-                    secondaryHeader.style.display = 'flex';
-                    secondaryHeader.style.position = 'fixed';
-                    secondaryHeader.style.top = '0';
-                    secondaryHeader.style.width = '100%';
-                    primaryHeader.style.visibility = 'none';
-                } else {
-                    // If the container-table is not in view, hide the secondary header and show the primary one
-                    secondaryHeader.style.display = 'none';
-                    // primaryHeader.style.display = 'flex';
-                }
-            } else {
+                // Hide the secondary header by default
                 secondaryHeader.style.display = 'none';
-            }
-        }
 
-        // Attach the scroll event listener
-        window.addEventListener('scroll', handleScroll);
+                // Function to handle scroll event
+                function handleScroll() {
+                    const containerRect = containerTable.getBoundingClientRect();
 
-        // Call handleScroll initially in case the user is already scrolled
-        handleScroll();
-    });
-    // Binding to component to render before page loading.
-
-    // toggle dropdown index for each row 
-    function toggleDropdown(id, el) {
-        const dropdown = document.getElementById(id);
-        const icon = el.querySelector(".fa-solid")
-        if (dropdown.classList.contains('show')) {
-            dropdown.classList.remove('show');
-            icon.classList.remove('fa-chevron-up');
-            icon.classList.add('fa-chevron-down');
-        } else {
-            // Hide other open dropdowns !
-            // document.querySelectorAll('.dropdown-content').forEach(function (content) {
-            //     content.classList.remove('show');
-            // });
-            dropdown.classList.add('show');
-
-            document.querySelectorAll('.fa-solid').forEach(function (icon) {
-                icon.classList.remove('fa-chevron-up');
-                icon.classList.add('fa-chevron-down');
-            });
-
-            dropdown.classList.add('show');
-            icon.classList.remove('fa-chevron-down');
-            icon.classList.add('fa-chevron-up');
-        }
-    }
-    // Toggle tab pills each plan.
-    document.querySelectorAll('.plan-head-mobile .tab').forEach(function (tab) {
-        tab.addEventListener('click', function () {
-            activePlan = tab.getAttribute("data-plan");
-
-            document.querySelectorAll('.plan-head-mobile .tab').forEach(function (otherTab) {
-                otherTab.classList.remove("active")
-            })
-            tab.classList.add("active")
-            renderTableRows(plansData);
-
-            document.querySelectorAll('tfoot th.plan-checkout').forEach(function (footer) {
-                footer.classList.remove('active');
-                if (footer.getAttribute('data-plan') === activePlan) {
-                    footer.classList.add('active');
+                    // If the container-table is visible in the viewport
+                    if (window.innerWidth <= 768) {
+                        if (containerRect.top <= 0 && containerRect.bottom > 0) {
+                            // Show the secondary header and hide the primary header
+                            secondaryHeader.style.display = 'flex';
+                            secondaryHeader.style.position = 'fixed';
+                            secondaryHeader.style.top = '0';
+                            secondaryHeader.style.width = '100%';
+                            primaryHeader.style.visibility = 'none';
+                        } else {
+                            // If the container-table is not in view, hide the secondary header and show the primary one
+                            secondaryHeader.style.display = 'none';
+                            // primaryHeader.style.display = 'flex';
+                        }
+                    } else {
+                        secondaryHeader.style.display = 'none';
+                    }
                 }
+
+                // Attach the scroll event listener
+                window.addEventListener('scroll', handleScroll);
+
+                // Call handleScroll initially in case the user is already scrolled
+                handleScroll();
             });
-        });
-    });
+            // Binding to component to render before page loading.
 
-    // Add same width for each tab.
-    document.addEventListener("DOMContentLoaded", function () {
-        const tabs = document.querySelectorAll('#plan-table .tab');
-        const visibleCount = Array.from(tabs).filter(tab => !tab.classList.contains('hidden')).length;
+            // toggle dropdown index for each row 
+            function toggleDropdown(id, el) {
+                const dropdown = document.getElementById(id);
+                const icon = el.querySelector(".fa-solid")
+                if (dropdown.classList.contains('show')) {
+                    dropdown.classList.remove('show');
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                } else {
+                    // Hide other open dropdowns !
+                    // document.querySelectorAll('.dropdown-content').forEach(function (content) {
+                    //     content.classList.remove('show');
+                    // });
+                    dropdown.classList.add('show');
 
-        const ths = document.querySelectorAll('#plan-table .plan-head th');
-        ths.forEach(th => {
-            th.style.width = `${100 / visibleCount}%`;
-        });
-    });
+                    document.querySelectorAll('.fa-solid').forEach(function (icon) {
+                        icon.classList.remove('fa-chevron-up');
+                        icon.classList.add('fa-chevron-down');
+                    });
 
-    // Split colspan for active plan column when in mobile.
-    function AdjustColspan() {
-        const featureColumn = document.querySelectorAll('.feature-column');
-        const activePlanColumn = document.querySelectorAll('.plan-column');
-        featureColumn.forEach(column => {
-            if (window.innerWidth <= 768) {
-                column.setAttribute('colspan', '2');
-            } else {
-                column.removeAttribute('colspan');
+                    dropdown.classList.add('show');
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                }
             }
-        });
-        activePlanColumn.forEach(column => {
-            if (window.innerWidth <= 768) {
-                column.setAttribute('colspan', '2');
-            } else {
-                column.removeAttribute('colspan');
+            // Toggle tab pills each plan.
+            document.querySelectorAll('.plan-head-mobile .tab').forEach(function (tab) {
+                tab.addEventListener('click', function () {
+                    activePlan = tab.getAttribute("data-plan");
+
+                    document.querySelectorAll('.plan-head-mobile .tab').forEach(function (otherTab) {
+                        otherTab.classList.remove("active")
+                    })
+                    tab.classList.add("active")
+                    renderTableRows(plansData);
+
+                    document.querySelectorAll('tfoot th.plan-checkout').forEach(function (footer) {
+                        footer.classList.remove('active');
+                        if (footer.getAttribute('data-plan') === activePlan) {
+                            footer.classList.add('active');
+                        }
+                    });
+                });
+            });
+
+            // Add same width for each tab.
+            document.addEventListener("DOMContentLoaded", function () {
+                const tabs = document.querySelectorAll('#plan-table .tab');
+                const visibleCount = Array.from(tabs).filter(tab => !tab.classList.contains('hidden')).length;
+
+                const ths = document.querySelectorAll('#plan-table .plan-head th');
+                ths.forEach(th => {
+                    th.style.width = `${100 / visibleCount}%`;
+                });
+            });
+
+            // Split colspan for active plan column when in mobile.
+            function AdjustColspan() {
+                const featureColumn = document.querySelectorAll('.feature-column');
+                const activePlanColumn = document.querySelectorAll('.plan-column');
+                featureColumn.forEach(column => {
+                    if (window.innerWidth <= 768) {
+                        column.setAttribute('colspan', '2');
+                    } else {
+                        column.removeAttribute('colspan');
+                    }
+                });
+                activePlanColumn.forEach(column => {
+                    if (window.innerWidth <= 768) {
+                        column.setAttribute('colspan', '2');
+                    } else {
+                        column.removeAttribute('colspan');
+                    }
+                });
             }
-        });
-    }
-    // Adjust colspan on page load and when window is resized
-    window.addEventListener('resize', AdjustColspan);
-    window.addEventListener('load', AdjustColspan);
-</script>
+            // Adjust colspan on page load and when window is resized
+            window.addEventListener('resize', AdjustColspan);
+            window.addEventListener('load', AdjustColspan);
+        </script>
     </section>
     <div class="123">
         <h1>123</h1>
@@ -1046,7 +1048,7 @@
         <h1>123</h1>
         <h1>123</h1>
     </div>
-   
+
 </body>
 
 </html>
