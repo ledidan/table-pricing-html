@@ -380,8 +380,7 @@
                 & .dropdown-content.show {
                     max-height: 100%;
                     opacity: 1;
-                    padding: 15px;
-
+                    padding: 20px;
                     & li {
                         margin-top: 5px;
                     }
@@ -488,9 +487,6 @@
 
         .plan-head-mobile:first-child {
             display: flex !important;
-            position: sticky;
-            top: 0;
-            z-index: 9999;
         }
 
         .plan-checkout-mobile {
@@ -868,7 +864,7 @@
                     secondaryHeader.style.position = 'fixed';
                     secondaryHeader.style.top = '0';
                     secondaryHeader.style.width = '100%';
-                    primaryHeader.style.display = 'none';
+                    primaryHeader.style.visibility = 'none';
                 } else {
                     // If the container-table is not in view, hide the secondary header and show the primary one
                     secondaryHeader.style.display = 'none';
