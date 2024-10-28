@@ -381,6 +381,9 @@
                     max-height: 100%;
                     opacity: 1;
                     padding: 20px;
+                    font-size: 14px;
+                    padding-top: 10px;
+                    transition: all .2s;
 
                     & li {
                         margin-top: 5px;
@@ -573,28 +576,6 @@
 </style>
 
 <body>
-    <div class="123">
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-    </div>
     <section class="container-table">
         <div class="plan-head plan-head-mobile tablist">
             <div class="tab active" data-plan="basic">
@@ -657,8 +638,6 @@
             </div>
         </div>
 
-
-
         <!-- SCRIPT -->
         <script>
             const plansData = [
@@ -704,7 +683,11 @@
                                 "Sản phẩm, dịch vụ",
                                 "Ti tuyển dụng",
                             ],
-                            values: { basic: "Basic", standard: "Standard", premium: "Premium" },
+                            values: {
+                                basic: '<span style="background-color: #d8efff; color: #008CFF; padding: 5px 10px; border-radius: 5px;">Cơ bản</span>',
+                                standard: '<span style="background-color: #e5f4d6; color: #74a131; padding: 5px 10px; border-radius: 5px;">Tiêu chuẩn</span>',
+                                premium: '<span style="background-color: #ffe8cb; color: #f39600; padding: 5px 10px; border-radius: 5px;"><i class="fa-solid fa-crown" style="padding-right: 4px"></i>Cao cấp</span>',
+                            },
                         },
                         {
                             title: "Ngôn ngữ",
@@ -830,7 +813,7 @@
                             <div class="row-box" onclick="toggleDropdown('${dropdownId}', this)">
                                 <h4>${item.title}</h4>
                                 <button class="dropdown-btn">
-                                    <i class="fa-solid fa-chevron-down"></i>
+                                    <i class="fa-solid fa-chevron-down fa-solid-arrow"></i>
                                 </button>
                             </div>
                             <ul class="dropdown-content" id="${dropdownId}">
@@ -888,7 +871,7 @@
             // toggle dropdown index for each row 
             function toggleDropdown(id, el) {
                 const dropdown = document.getElementById(id);
-                const icon = el.querySelector(".fa-solid")
+                const icon = el.querySelector(".fa-solid.fa-solid-arrow")
                 if (dropdown.classList.contains('show')) {
                     dropdown.classList.remove('show');
                     icon.classList.remove('fa-chevron-up');
@@ -900,9 +883,10 @@
                     // });
                     dropdown.classList.add('show');
 
-                    document.querySelectorAll('.fa-solid').forEach(function (icon) {
+                    document.querySelectorAll('.fa-solid.fa-solid-arrow').forEach(function (icon) {
                         icon.classList.remove('fa-chevron-up');
                         icon.classList.add('fa-chevron-down');
+
                     });
 
                     dropdown.classList.add('show');
@@ -965,90 +949,6 @@
             window.addEventListener('load', AdjustColspan);
         </script>
     </section>
-    <div class="123">
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-        <h1>123</h1>
-    </div>
-
 </body>
 
 </html>
