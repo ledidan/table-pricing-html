@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <!-- <script src="plansData.js"></script> -->
 </head>
 
@@ -120,8 +125,96 @@
         display: block;
     }
 
+    @font-face {
+        font-display: swap;
+        font-family: "NotoSans";
+        src: url("/wp-content/themes/matbaows/assets/fonts/notosans/NotoSans-Light.woff") format("woff");
+        font-weight: 200;
+        font-style: normal
+    }
+
+    @font-face {
+        font-display: swap;
+        font-family: "NotoSans";
+        src: url("/wp-content/themes/matbaows/assets/fonts/notosans/NotoSans-Regular.woff") format("woff");
+        font-weight: 400;
+        font-style: normal
+    }
+
+    @font-face {
+        font-display: swap;
+        font-family: "NotoSans";
+        src: url("/wp-content/themes/matbaows/assets/fonts/notosans/NotoSans-Bold.woff") format("woff");
+        font-weight: 600;
+        font-style: normal
+    }
+
+    @font-face {
+        font-display: swap;
+        font-family: "NotoSans";
+        src: url("/wp-content/themes/matbaows/assets/fonts/notosans/NotoSans-ExtraBold.woff") format("woff");
+        font-weight: 900;
+        font-style: normal
+    }
+
+    @font-face {
+        font-display: swap;
+        font-family: "Roboto";
+        src: url("/wp-content/themes/matbaows/assets/fonts/Roboto/Roboto-Thin.woff") format("woff");
+        font-weight: 100;
+        font-style: normal
+    }
+
+    @font-face {
+        font-display: swap;
+        font-family: "Roboto";
+        src: url("/wp-content/themes/matbaows/assets/fonts/Roboto/Roboto-Light.woff") format("woff");
+        font-weight: 300;
+        font-style: normal
+    }
+
+    @font-face {
+        font-display: swap;
+        font-family: "Roboto";
+        src: url("/wp-content/themes/matbaows/assets/fonts/Roboto/Roboto-Regular.woff") format("woff");
+        font-weight: 400;
+        font-style: normal
+    }
+
+    @font-face {
+        font-display: swap;
+        font-family: "Roboto";
+        src: url("/wp-content/themes/matbaows/assets/fonts/Roboto/Roboto-Medium.woff") format("woff");
+        font-weight: 500;
+        font-style: normal
+    }
+
+    @font-face {
+        font-display: swap;
+        font-family: "Roboto";
+        src: url("/wp-content/themes/matbaows/assets/fonts/Roboto/Roboto-Bold.woff") format("woff");
+        font-weight: 700;
+        font-style: normal
+    }
+
+    @font-face {
+        font-display: swap;
+        font-family: "Roboto";
+        src: url("/wp-content/themes/matbaows/assets/fonts/Roboto/Roboto-Black.woff") format("woff");
+        font-weight: 900;
+        font-style: normal
+    }
+
     body {
-        line-height: 1;
+        font-family: "NotoSans", sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        color: #333333;
+        line-height: 1.2;
+        margin: 0;
+        padding: 0;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 
     ol,
@@ -161,16 +254,15 @@
         border-spacing: 0;
     }
 
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-    }
-
     .container-table {
         margin: 20px auto;
-        padding-left: 10px;
-        padding-right: 10px;
+    }
+
+    .row {
+        max-width: 1320px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 15px 30px;
     }
 
     .container-table .plan-head-mobile {
@@ -228,20 +320,21 @@
 
         & th,
         td {
-            padding: 15px !important;
+            padding: 10px !important;
             text-align: center;
-            border: 1px solid #ccc;
+            border: 1px solid #d8e5f0;
             vertical-align: middle;
             word-wrap: break-word;
         }
 
         & tbody {
             & th {
-                background-color: #f1f1f1;
+                background-color: #eff7ff;
+                font-size: 1.2rem;
+                font-weight: 600;
                 color: #333;
                 text-align: left;
                 padding-left: 10px;
-                font-weight: bold;
             }
 
             ;
@@ -312,7 +405,6 @@
         }
 
         & thead.plan-head {
-
             & .plan-column.active {
                 background-color: #007bff;
                 color: white;
@@ -328,17 +420,19 @@
 
         & tbody.section-container {
             & .section-header th {
-                border: 1px solid #ccc;
-                background-color: #eef7ff;
+                border: 1px solid #d8e5f0;
+                background-color: #eff7ff;
                 color: #333;
                 text-align: left;
                 padding-left: 10px;
-                font-weight: bold;
-                font-size: 20px;
+                font-weight: 600;
+                font-size: 1.2rem;
 
             }
 
             & tr.section-row {
+                background-color: #fefefe;
+
                 & .feature-column {
                     & h4 {
                         text-align: left;
@@ -426,7 +520,6 @@
             font-size: 22px !important;
             color: #fff;
             letter-spacing: .5px;
-            font-family: "Roboto", sans-serif;
             font-weight: 500
         }
 
@@ -435,9 +528,7 @@
             color: #fff;
             margin-top: 10px;
             margin-bottom: 5px;
-            font-family: "Roboto", sans-serif;
             line-height: 1.4;
-            letter-spacing: 1px;
             font-weight: 600
         }
     }
@@ -447,7 +538,6 @@
             font-size: 16px !important;
             color: #fff;
             letter-spacing: .5px;
-            font-family: "Roboto", sans-serif;
             font-weight: 500
         }
 
@@ -456,7 +546,6 @@
             color: #fff;
             margin-top: 10px;
             margin-bottom: 5px;
-            font-family: "Roboto", sans-serif;
             line-height: 1.4;
             font-weight: 600
         }
@@ -472,6 +561,16 @@
 
     .plan-checkout-mobile-btn {
         display: none;
+    }
+
+    .fa-solid.fa-check {
+        font-size: 16px;
+        color: #81b441;
+    }
+
+    .fa-solid.fa-chevron-down {
+        color: #757575;
+        font-size: 12px;
     }
 
     /* Responsive for tablet to smaller ones */
@@ -573,68 +672,116 @@
             text-align: center;
         }
     }
+
+    @media screen and (max-width: 580px) {
+        .plan-head-mobile {
+            & .tab {
+                padding: 10px 2px !important
+            }
+            & div.tab > h3 {
+                font-size: 1rem !important;
+                font-weight: 600;
+                margin-top: 5px;
+            }
+            & div.tab > div.price {
+                margin-top: 0.5rem;
+            }
+            & div.tab > div.price > span:first-child {
+                font-size: 1rem !important;
+            }
+            & div.tab > div.price > span.year {
+                font-size: 0.7rem !important;
+            }
+        }
+    }
 </style>
 
 <body>
     <section class="container-table">
-        <div class="plan-head plan-head-mobile tablist">
-            <div class="tab active" data-plan="basic">
-                <h3>Cơ Bản</h3><br><span>2.388.000 </span>₫/năm
+        <div class="row">
+            <div class="plan-head plan-head-mobile tablist">
+                <div class="tab active" data-plan="basic">
+                    <h3>Cơ Bản</h3>
+                    <div class="price">
+                        <span>2.388.000 </span>
+                        <span class="year">₫/năm</span>
+                    </div>
+                </div>
+                <div class="tab" data-plan="standard">
+                    <h3>Tiêu Chuẩn</h3>
+                    <div class="price">
+                        <span>3.588.000</span>
+                        <span class="year">₫/năm</span>
+                    </div>
+                </div>
+                <div class="tab" data-plan="premium">
+                    <h3>Cao Cấp</h3>
+                    <div class="price">
+                        <span>5.988.000</span>
+                        <span class="year">₫/năm</span>
+                    </div>
+                </div>
             </div>
-            <div class="tab" data-plan="standard">
-                <h3>Tiêu Chuẩn</h3><br><span>3.588.000</span> ₫/năm
+            <div class="plan-head plan-head-mobile tablist secondary">
+                <div class="tab active" data-plan="basic">
+                    <h3>Cơ Bản</h3>
+                    <div class="price">
+                        <span>2.388.000 </span>
+                        <span class="year">₫/năm</span>
+                    </div>
+                </div>
+                <div class="tab" data-plan="standard">
+                    <h3>Tiêu Chuẩn</h3>
+                    <div class="price">
+                        <span>3.588.000</span>
+                        <span class="year">₫/năm</span>
+                    </div>
+                </div>
+                <div class="tab" data-plan="premium">
+                    <h3>Cao Cấp</h3>
+                    <div class="price">
+                        <span>5.988.000</span>
+                        <span class="year">₫/năm</span>
+                    </div>
+                </div>
             </div>
-            <div class="tab" data-plan="premium">
-                <h3>Cao Cấp</h3><br><span>5.988.000</span> ₫/năm
-            </div>
-        </div>
-        <div class="plan-head plan-head-mobile tablist secondary">
-            <div class="tab active" data-plan="basic">
-                <h3>Cơ Bản</h3><br><span>2.388.000 </span>₫/năm
-            </div>
-            <div class="tab" data-plan="standard">
-                <h3>Tiêu Chuẩn</h3><br><span>3.588.000</span> ₫/năm
-            </div>
-            <div class="tab" data-plan="premium">
-                <h3>Cao Cấp</h3><br><span>5.988.000</span> ₫/năm
-            </div>
-        </div>
-        <table id="plan-table">
-            <thead class="plan-head tablist">
-                <tr>
-                    <th class="empty-tab"></th>
-                    <th class="tab active" data-plan="basic">
-                        <h3>Cơ Bản</h3><br><span>2.388.000 ₫/năm</span>
-                    </th>
-                    <th class="tab" data-plan="standard">
-                        <h3>Tiêu Chuẩn</h3><br><span>3.588.000 ₫/năm</span>
-                    </th>
-                    <th class="tab" data-plan="premium">
-                        <h3>Cao Cấp</h3><br><span>5.988.000 ₫/năm</span>
-                    </th>
-                </tr>
-            </thead>
-            <tbody class="section-container" id="table-body">
-            </tbody>
-            <tfoot>
-                <tr class="plan-checkout-desktop">
-                    <th class="empty-tab"></th>
-                    <th class="plan-checkout" data-plan="basic">
-                        Đăng ký ngay
-                    </th>
-                    <th class="plan-checkout" data-plan="standard">
-                        Đăng ký ngay
-                    </th>
-                    <th class="plan-checkout" data-plan="premium">
-                        Đăng ký ngay
-                    </th>
-                </tr>
-            </tfoot>
-        </table>
-        <div class="tfoot plan-checkout-mobile-btn">
-            <div></div>
-            <div class="mobile-btn-click">
-                Đăng ký ngay
+            <table id="plan-table">
+                <thead class="plan-head tablist">
+                    <tr>
+                        <th class="empty-tab"></th>
+                        <th class="tab active" data-plan="basic">
+                            <h3>Cơ Bản</h3><br><span>2.388.000 ₫/năm</span>
+                        </th>
+                        <th class="tab" data-plan="standard">
+                            <h3>Tiêu Chuẩn</h3><br><span>3.588.000 ₫/năm</span>
+                        </th>
+                        <th class="tab" data-plan="premium">
+                            <h3>Cao Cấp</h3><br><span>5.988.000 ₫/năm</span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="section-container" id="table-body">
+                </tbody>
+                <tfoot>
+                    <tr class="plan-checkout-desktop">
+                        <th class="empty-tab"></th>
+                        <th class="plan-checkout" data-plan="basic">
+                            Đăng ký ngay
+                        </th>
+                        <th class="plan-checkout" data-plan="standard">
+                            Đăng ký ngay
+                        </th>
+                        <th class="plan-checkout" data-plan="premium">
+                            Đăng ký ngay
+                        </th>
+                    </tr>
+                </tfoot>
+            </table>
+            <div class="tfoot plan-checkout-mobile-btn">
+                <div></div>
+                <div class="mobile-btn-click">
+                    Đăng ký ngay
+                </div>
             </div>
         </div>
 
